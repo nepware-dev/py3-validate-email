@@ -21,9 +21,7 @@ LOGGER = getLogger(__name__)
 TMP_PATH = Path(gettempdir()).joinpath(
     f'{gettempprefix()}-py3-validate-email-{geteuid()}')
 ENV_IGNORE_UPDATER = environ.get('PY3VE_IGNORE_UPDATER')
-BLACKLIST_URL = (
-    'https://raw.githubusercontent.com/disposable-email-domains/' +
-    'disposable-email-domains/master/disposable_email_blocklist.conf')
+BLACKLIST_URL = 'https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt'
 LIB_PATH_DEFAULT = Path(__file__).resolve().parent.joinpath('data')
 BLACKLIST_FILEPATH_INSTALLED = LIB_PATH_DEFAULT.joinpath('blacklist.txt')
 BLACKLIST_FILEPATH_TMP = TMP_PATH.joinpath('blacklist.txt')
